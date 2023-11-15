@@ -113,7 +113,6 @@
                           </div>
                         </div>
                       </div>
-
                       <?php endforeach ?>
                     </tbody>
                   </table>

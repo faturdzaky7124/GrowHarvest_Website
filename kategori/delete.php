@@ -8,8 +8,6 @@
         $sqlshow = mysqli_query($con,$queryshow);
         $rowshow = mysqli_fetch_assoc($sqlshow);
 
-        // unlink("../assets/img/avatars/". $rowshow["gambar"]);
-
         $query ="DELETE FROM kategoriproduk WHERE id_kategori ='$id_kategori';";
         $sql = mysqli_query($con,$query);
 
