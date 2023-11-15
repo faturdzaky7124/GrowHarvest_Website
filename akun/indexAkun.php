@@ -219,11 +219,11 @@
                               </button>
                               <button type="submit" class="btn btn-primary" name="btnsave" id="btnsave">Save changes</button>
                             </div>
-                            
+                            </form>
                     </div>
                   </div>
             </div>
-          </form>
+          
             <!-- FORM TAMBAH END -->
 
 

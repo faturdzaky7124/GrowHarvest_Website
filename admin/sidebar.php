@@ -40,13 +40,13 @@
                 <div data-i18n="Analytics">Kategori</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item <?php echo ($page === 'indexProduk.php') ? 'active' : ''; ?>">
               <a href="../produk/indexProduk.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-package"></i>
                 <div data-i18n="Analytics">Produk</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item <?php echo ($page === '.php') ? 'active' : ''; ?>">
               <a href="index.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-receipt"></i>
                 <div data-i18n="Analytics">laporan Penjualan</div>

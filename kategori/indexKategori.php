@@ -33,6 +33,8 @@
               
               <div class="card-header d-flex justify-content-between align-items-center">
               <h5 class="card-header fw-bold">Kategori</h5>
+
+              <!-- FORM TAMBAH KATEGORI -->
                 <form method="POST" action="tambahkategori.php" >
                   <table>
                     <tr>
@@ -41,6 +43,8 @@
                     </tr>
                   </table>
                 </form>
+              <!-- FORM TAMBAH KATEGORI END -->
+
               </div>
                 <div class="table-responsive text-nowrap">
                   <table class="table table-hover">
