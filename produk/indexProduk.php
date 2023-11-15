@@ -181,7 +181,7 @@
                   <div class="card mb-3">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img class="card-img card-img-left" height="200" width="200" src="../assets/img/imgproduk/<?php echo $dataproduk["gambar_produk"]?>" alt="Card image" />
+                        <img class="card-img card-img-left" height="200" src="../assets/img/imgproduk/<?php echo $dataproduk["gambar_produk"]?>" alt="Card image" />
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
