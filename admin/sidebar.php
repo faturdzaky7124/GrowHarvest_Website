@@ -20,7 +20,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Fiture</span>
+              <span class="menu-header-text">Fitur</span>
             </li>
             <li class="menu-item <?php echo ($page === 'index.php') ? 'active' : ''; ?>">
               <a href="../admin/index.php" class="menu-link">

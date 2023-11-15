@@ -2,12 +2,6 @@
   ob_start();
   require "../function/session.php";
   require "../function/koneksi.php";
-  // if ($_SESSION["role"] !== "admin") {
-    // Jika bukan pegawai, Anda dapat mengarahkan mereka ke halaman lain atau menolak akses.
-    // header("location: ../admin/index.php"); // Contoh pengalihan ke halaman admin.
-    // Atau gunakan die() atau exit() untuk menolak akses.
-    // die("Anda tidak diizinkan mengakses halaman ini")
-  // }
   
 ?>
 
