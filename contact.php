@@ -110,7 +110,7 @@
                 <!-- <h2 class="ftco-heading-2">Rajawali</h2> -->
                 <!-- <p>Kami meyediakan sarana pertanian,pupuk,benih,pestisida,alat pertanian DLL.</p> -->
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-1">
-                  <p><span class="icon-whatsapp"></span> <a href="tel://1234567920"><span >+6281331638447</a></p>
+                  <p><span> Whatsapp:</span> <a href="tel://1234567920"><br><span>+6281331638447</a></p>
                   <!-- <li class="ftco-animate"><a href="tel://1234567920"><span class="icon-whatsapp"></span></a></li> -->
                   <!-- <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li> -->
                   <!-- <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li> -->
@@ -120,12 +120,12 @@
           </div>
           <div class="col-md-3 d-flex">
           	<div class="info bg-white p-4">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">Rajawali@gmail.com</a></p>
+	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">Pertanianrajawali@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="info bg-white p-4">
-	            <p><span>Website</span> <a href="#">Rajawali.html</a></p>
+	            <p><span>Shopee:</span> <a href="http://shopee.co.id/pertanian.milenial"><br>Milenial's tani</a></p>
 	          </div>
           </div>
         </div>
