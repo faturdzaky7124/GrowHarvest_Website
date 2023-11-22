@@ -110,7 +110,7 @@
                 <!-- <h2 class="ftco-heading-2">Rajawali</h2> -->
                 <!-- <p>Kami meyediakan sarana pertanian,pupuk,benih,pestisida,alat pertanian DLL.</p> -->
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-1">
-                <p><span>Whatsapp:</span><a href="https://wa.me/6281331638447">+6281331638447</a>
+                <p><span>Whatsapp:</span><a href="https://wa.me/6281331638447"><br>+6281331638447</a>
                   <!-- <li class="ftco-animate"><a href="tel://1234567920"><span class="icon-whatsapp"></span></a></li> -->
                   <!-- <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li> -->
                   <!-- <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li> -->
