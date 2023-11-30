@@ -3,18 +3,21 @@
     require "../function/session.php";
     require "../function/koneksi.php";
 
-    $query= " SELECT * FROM admin ORDER BY id_admin ASC ";
-    $sql= mysqli_query($con,$query);
-    $no = 0;
-
     if ($_SESSION["tingkat_akses"] !== "admin") {
         header("location: ../admin/index.php"); 
 	}
 
-	$user= $_GET["id_admin"];
+	$user= $_GET["id_akun"];
+	$swa = query("SELECT * FROM tb_akun WHERE id_akun = '$user'")[0];
 
-	$swa = query("SELECT * FROM admin WHERE id_admin = '$user'")[0];
+  if( isset($_POST["simpanubahakun"]) ) {
 
+		if (ubahakun ($_POST) > 0 ) {
+			echo "<script>window.location='../akun/indexAkun.php';</script>";
+		}else {
+			echo "<script>window.location='../akun/indexAkun.php';</script>";
+		}		
+	}
 ?>
 
           <!-- FROM EDIT -->
@@ -23,24 +26,27 @@
 						<hr class="my-0" />
 						<!-- Account -->
 						<div class="card-body">
-						<form id="formAccountSettings" action="action.php" method="POST" onsubmit="return confirmEdit(event)" enctype="multipart/form-data">
+						<form id="updateakun" action="" method="POST" onsubmit="return confirmEdit(event)" enctype="multipart/form-data">
 						<div class="d-flex align-items-start align-items-sm-center mb-4 gap-4">
 							<img
-							src="../assets/img/avatars/<?= $swa["gambar"] ?>"
+							src="<?= $swa["gambar"] ?>"
 							alt="user-avatar"
 							class="d-block w-px-100 h-px-100 rounded"
-							name="upload"
+							name="uploadedAvatar"
 							id="uploadedAvatar" />
               <div class="button-wrapper">
-                          <label for="upload" class="btn btn-success me-2 mb-4" tabindex="0">
+              <!-- <input type="hidden" value="<?= $swa["gambar"] ?>" name="foto2"> -->
+                          <label for="uploadubahgambar" class="btn btn-success me-2 mb-4" tabindex="0">
                             <span class="d-none d-sm-block">Upload new photo</span>
                             <i class="bx bx-upload d-block d-sm-none"></i>
+                            
                             <input
                               type="file"
-                              id="upload"
+                              id="uploadubahgambar"
+                              name="uploadubahgambar"
                               class="account-file-input"
                               hidden
-                              accept="image/png, image/jpeg"
+                              accept="image/*"
                             />
                           </label>
                           <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
@@ -53,37 +59,42 @@
 							<div class="row">
               <hr class="my-0" />
 							<div class="mb-3 col-md-6">
-								<label for="firstName" class="form-label">ID</label>
+								<label for="idadmin" class="form-label">ID</label>
 								<input
 								class="form-control"
 								type="text"
-								name="user"
-								value="<?= $swa["id_admin"] ?>" readonly
+                id="idadmin"
+								name="idadmin"
+								value="<?= $swa["id_akun"] ?>" readonly
 								placeholder="" required
 								autofocus />
 							</div>
 							<div class="mb-3 col-md-6">
-								<label for="lastName" class="form-label">Nama Pengguna</label>
-								<input class="form-control" id="inputHuruf" oninput="validateInput(this)" type="text" name="nama" readonly value="<?= $swa["nama_pengguna"] ?>" required />
+								<label for="ubahusername" class="form-label">Username</label>
+								<input class="form-control" id="ubahusername" oninput="validateInput(this)" type="text" name="ubahusername" readonly value="<?= $swa["nama_pengguna"] ?>" required />
 								<span id="error-message" style="color: #00B300;"></span>
 							</div>
 							<div class="mb-3 col-md-6">
-								<label for="lastName" class="form-label">Nama Lengkap</label>
-								<input class="form-control" id="inputHuruf" oninput="validateInput(this)" type="text" name="user" value="<?= $swa["nama_lengkap"] ?>" required />
+								<label for="ubahnama" class="form-label">Nama Lengkap</label>
+								<input class="form-control" id="ubahnama" type="text" name="ubahnama" value="<?= $swa["nama_lengkap"] ?>" required />
 								<span id="error-message" style="color: #00B300;"></span>
 							</div>
 							<div class="mb-3 col-md-6">
-								<label for="address" class="form-label">Alamat</label>
-								<input type="text" class="form-control"  value="<?= $swa["alamat"] ?>" required name="alamat" />
+								<label for="ubahalamat" class="form-label">Alamat</label>
+								<input type="text" class="form-control" id="ubahalamat" value="<?= $swa["alamat"] ?>" required name="ubahalamat" />
+							</div>
+              <div class="mb-3 col-md-6">
+								<label for="ubahnohp" class="form-label">No Hp</label>
+								<input type="text" class="form-control" id="ubahnohp" value="<?= $swa["no_hp"] ?>" required name="ubahnohp" />
 							</div>
 							<div class="mb-3 col-md-6">
-								<label for="state" class="form-label">Level Akun</label>
+								<label for="state" class="form-label">Peran</label>
 								<input class="form-control" type="text" value="<?= $swa["tingkat_akses"] ?>" readonly required name="level" placeholder="" />
 							</div>
 							</div>
 							<div class="mt-4">
 							
-							<button type="submit"  id="accountActivation" class="btn btn-success me-2">Simpan Data</button>
+							<button type="submit"  id="simpanubahakun" name="simpanubahakun" class="btn btn-success me-2">Simpan Data</button>
 							<a class="btn btn-outline-secondary" href="indexAkun.php">Kembali</a>
 							</div>
 							</form>
@@ -134,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </script>
 
-<script>
+<!-- <script>
 function confirmEdit(event) {
   event.preventDefault();
 
@@ -186,7 +197,7 @@ function confirmEdit(event) {
     }
   });
 }
-</script>
+</script> -->
 
 
 

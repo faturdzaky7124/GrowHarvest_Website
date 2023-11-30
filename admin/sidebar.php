@@ -1,9 +1,16 @@
 <?php
   $page = basename($_SERVER["REQUEST_URI"]);
 ?>
+
+<style>
+.ss::after{
+background-color: #081226;
+}
+</style>
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+  
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+          <a href="index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
               <img src="../assets/img/backgrounds/raja.jpg" alt="" class="d-block rounded" height="60" width="60">
               </span>
@@ -22,7 +29,7 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Fitur</span>
             </li>
-            <li class="menu-item <?php echo ($page === 'index.php') ? 'active' : ''; ?>">
+            <li class="menu-item ss <?php echo ($page === 'index.php') ? 'active' : ''; ?>">
               <a href="../admin/index.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
@@ -40,18 +47,31 @@
                 <div data-i18n="Analytics">Kategori</div>
               </a>
             </li>
-            <li class="menu-item <?php echo ($page === 'indexProduk.php') ? 'active' : ''; ?>">
-              <a href="../produk/indexProduk.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bxs-package"></i>
-                <div data-i18n="Analytics">Produk</div>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bxs-book-content "></i>
+                <div data-i18n="Account Settings">Data Produk</div>
               </a>
+              <ul class="menu-sub">
+                  <li class="menu-item <?php echo ($page === 'indexProduk.php') ? 'active' : ''; ?>">
+                  <a href="../produk/indexProduk.php" class="menu-link">
+                    <i class="menu-icon tf-icons bx bxs-package"></i>
+                    <div data-i18n="Analytics">Produk</div>
+                  </a>
+                </li>
+                    <li class="menu-item <?php echo ($page === 'listProduk.php') ? 'active' : ''; ?>">
+                  <a href="../produk/listProduk.php" class="menu-link">
+                    <i class="menu-icon tf-icons bx bxs-dock-top"></i>
+                    <div data-i18n="Analytics">List Produk</div>
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li class="menu-item <?php echo ($page === '.php') ? 'active' : ''; ?>">
-              <a href="index.php" class="menu-link">
+            <li class="menu-item <?php echo ($page === 'indexLaporan.php') ? 'active' : ''; ?>">
+              <a href="../laporan_transaksi/indexLaporan.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-receipt"></i>
                 <div data-i18n="Analytics">laporan Penjualan</div>
               </a>
             </li>
           </ul>
         </aside>
-        

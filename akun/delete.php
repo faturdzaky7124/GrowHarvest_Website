@@ -2,15 +2,15 @@
     require_once "../function/koneksi.php";
 
     if(isset($_GET["id"])) {
-        $id_admin = $_GET["id"];
+        $id_produk = $_GET["id"];
 
-        $queryshow = "SELECT * FROM admin WHERE id_admin = '$id_admin'";
+        $queryshow = "SELECT * FROM tb_akun WHERE id_akun = '$id_produk'";
         $sqlshow = mysqli_query($con,$queryshow);
         $rowshow = mysqli_fetch_assoc($sqlshow);
 
         unlink("../assets/img/avatars/". $rowshow["gambar"]);
 
-        $query ="DELETE FROM admin WHERE id_admin ='$id_admin';";
+        $query ="DELETE FROM tb_akun WHERE id_akun ='$id_produk';";
         $sql = mysqli_query($con,$query);
 
         if ($sql) {

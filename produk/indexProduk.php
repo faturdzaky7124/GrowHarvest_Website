@@ -3,11 +3,11 @@
     require "../function/session.php";
     require "../function/koneksi.php";
 
-  $query= " SELECT * FROM produk ORDER BY id_produk ASC ";
+  $query= " SELECT * FROM tb_produk ORDER BY id_produk ASC ";
   $sql= mysqli_query($con,$query);
   $no = 0;
 
-  $query= " SELECT * FROM kategoriproduk ORDER BY id_kategori ASC ";
+  $query= " SELECT * FROM tb_kategori ORDER BY id_kategori ASC ";
   $kate= mysqli_query($con,$query);
 ?>
 <style>
@@ -34,11 +34,19 @@
 <!-- FORM TABEL PRODUK -->
 <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                  <h5 class="card-header">Data Produk</h5>
-                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modaltambahproduk"  name="btntambahproduk" id="btntambahproduk">Tambah Produk</button>
+                    <h5 class="card-header">Data Produk</h5>  
+                    <div class="d-flex ">
+                        <form class="d-flex ms-2">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="tf-icons bx bx-search"></i></span>
+                                <input type="text" id="cari" name="cari" class="form-control" placeholder="Search..." />
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-success ms-2" data-bs-toggle="modal" data-bs-target="#modaltambahproduk" name="btntambahproduk" id="btntambahproduk">Tambah Produk</button>
+                    </div>
                 </div>
                 <div class="table-responsive text-nowrap">
-                  <table class="table">
+                  <table id="example" class="table">
                     <caption class="ms-4">
                       List of Projects
                     </caption>
@@ -66,9 +74,8 @@
                               data-popup="tooltip-custom"
                               data-bs-placement="top"
                               class="avatar avatar-xs pull-up"
-                              title="Lilian Fuller"
                             >
-                              <img src="../assets/img/imgproduk/<?php echo $dataproduk["gambar_produk"]?>" alt="Avatar" class="rounded-circle" />
+                              <img src="<?php echo $dataproduk["gambar_produk"]?>" alt="Avatar" class="rounded-circle" />
                             </li>
                           </ul>
                         </td>
@@ -78,7 +85,7 @@
                               <i class="bx bx-dots-vertical-rounded"></i>
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
+                              <a class="dropdown-item" href="editproduk.php?id_produk=<?= $dataproduk["id_produk"];?>"
                                 ><i class="bx bx-edit-alt me-1"></i> Edit</a
                               >
                               <a class="dropdown-item" href="delete.php?id=<?php echo $dataproduk['id_produk']; ?>"
@@ -91,6 +98,7 @@
                       <?php endforeach ?>
                     </tbody>
                   </table>
+                  
                 </div>
               </div>
 <!-- FORM TABEL PRODUK END -->
@@ -174,46 +182,9 @@
               </div>
               <!-- FORM TAMBAH PRODUK END -->
 
-              <h5 class="pb-1 mb-4"></h5>
-              <!-- <div class="row mb-5"> -->
-              <?php 
-              $counter = 0; // Initialize a counter
-              foreach ($sql as $dataproduk): 
-                if ($counter % 2 == 0) {
-                  // Start a new row for every two products
-                  echo '<div class="row mb-3">';
-                } ?>
-                <div class="col-md">
-                  <div class="card mb-3">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img class="card-img card-img-left" height="200" src="../assets/img/imgproduk/<?php echo $dataproduk["gambar_produk"]?>" alt="Card image" />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title"><?php echo $dataproduk["nama_produk"]?></h5>
-                            <p class="card-text">
-                              <?php echo $dataproduk["deskripsi"]?>
-                            </p>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Rp <?php echo $dataproduk["harga_produk"]?></li>
-                            </ul>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <?php $counter++;
-                    if ($counter % 2 == 0) {
-                      // Close the row after every two products
-                      echo '</div>';
-                    }
-                  endforeach; 
-                  // Close the row if there are an odd number of products
-                  if ($counter % 2 != 0) {
-                    echo '</div>';
-                } ?>
+              
+
+
 
 
 
@@ -235,6 +206,17 @@
                 imagePreview.src = '';
             }
         });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#cari").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#example tbody tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
 </script>
 
 <?php 

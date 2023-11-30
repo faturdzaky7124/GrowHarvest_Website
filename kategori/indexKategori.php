@@ -3,7 +3,7 @@
     require "../function/session.php";
     require "../function/koneksi.php";
 
-  $query= " SELECT * FROM kategoriproduk ORDER BY id_kategori ASC ";
+  $query= " SELECT * FROM tb_kategori ORDER BY id_kategori ASC ";
   $sql= mysqli_query($con,$query);
   $no = 0;
 
@@ -99,7 +99,7 @@
                               <div class="row">
                                 <div class="col mb-3">
                                   <label for="namaedit" class="form-label">Nama</label>
-                                  <input type="text" id="namaedit" name="namaedit" class="form-control" value="<?= $datakategori["nama_kategori"];?>" />
+                                  <input required type="text" id="namaedit" name="namaedit" class="form-control" value="<?= $datakategori["nama_kategori"];?>" />
                                 </div>
                               </div>
                               <input type="text" hidden name="id_kategori" value="<?= $datakategori["id_kategori"];?>">

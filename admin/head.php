@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Rajawali</title>
 
     <meta name="description" content="" />
 
@@ -55,7 +55,6 @@
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 
 
     <!-- Page CSS -->
@@ -69,4 +68,6 @@
 
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
   </head>
