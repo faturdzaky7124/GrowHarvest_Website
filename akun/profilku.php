@@ -29,12 +29,6 @@
               <img src="<?php echo $_SESSION["gambar"]; ?>" alt="Profile" class="rounded-circle" width="150" height="150">
               <h2> <?php echo $_SESSION["nama_pengguna"]; ?></h2>
               <h3><?php echo $_SESSION["tingkat_akses"]; ?></h3>
-              <div class="social-links mt-2">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
             </div>
           </div>
           <h5 class="pb-1 mb-4"></h5>

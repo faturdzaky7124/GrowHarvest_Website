@@ -99,7 +99,7 @@
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-bread" style="background-image: url('assets/landingpage/asetLp/img/produk1.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('assets/landingpage/asetLP/img/produk1.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -109,6 +109,7 @@
         </div>
       </div>
     </div>
+
 
 
 
@@ -136,28 +137,48 @@
 						<div class="overlay"></div>
 					</a>
 					<div class="text py-3 pb-4 px-3 text-center">
-						<h3><a href="#"><?= $data["nama_produk"] ?></a></h3>
+						<h3><a href="#" data-toggle="modal" data-target="#productModal<?= $data["id_produk"] ?>"><?= $data["nama_produk"] ?></a></h3>
 						<div class="d-flex">
 							<div class="pricing">
 								<!-- <p class="price"><span>$120.00</span></p> -->
 							</div>
 						</div>
 						<div class="bottom-area d-flex px-3">
-							<div class="m-auto d-flex">
-								<!-- <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-									<span><i class="ion-ios-menu"></i></span>
-								</a>
-								<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-									<span><i class="ion-ios-cart"></i></span>
-								</a>
-								<a href="#" class="heart d-flex justify-content-center align-items-center ">
-									<span><i class="ion-ios-heart"></i></span>
-								</a> -->
-							</div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
+
+					<div class="modal fade" id="productModal<?= $data["id_produk"] ?>" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-sm" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel2">Detail Produk</h5>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                <div class="col mb-3">
+								<div class="d-flex align-items-start align-items-sm-center gap-4">
+                                            <img
+                                              src="assets/landingpage/asetLP/img/produk1.jpg"
+                                              alt="user-avatar"
+                                              class="d-block rounded"
+                                              height="100"
+                                              width="100"
+                                              id="uploadedAvatar"
+                                            />
+                                          </div>
+                                </div>
+                              </div>
+                              <div class="row g-4">
+							  <p class="price"><?= $data["deskripsi"] ?></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
 			<?php endforeach ?>
 
 		</div>
@@ -378,6 +399,29 @@
   <script src="assets/landingpage/js/main.js"></script>
 
   <script src="assets/landingpage/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <script>
+    // Add this script to handle the click event and load product details dynamically
+    $(document).ready(function() {
+        $('#productModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var productID = button.data('productid');
+
+            // Assuming you have a PHP script to fetch product details by ID, you can use AJAX
+            $.ajax({
+                url: 'get_product_details.php', // Replace with your PHP script
+                method: 'GET',
+                data: {id: productID},
+                success: function(response) {
+                    $('#productDetails').html(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
     
   </body>
 </html>

@@ -241,7 +241,7 @@
     		<div class="row">
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/images/product-8.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0004.jpg" alt="Colorlib Template">
     						<!-- <span class="status">30%</span> -->
     						<div class="overlay"></div>
     					</a>
@@ -270,7 +270,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/asetLP/img/bestProduk2.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0005.jpg" alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -298,7 +298,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/asetLP/img/bestProduk3.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0006.jpg" alt="Colorlib Template">
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -326,7 +326,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/images/product-4.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0007.jpg" alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -356,7 +356,7 @@
 
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/images/product-5.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0008.jpg" alt="Colorlib Template">
     						<!-- <span class="status">30%</span> -->
     						<div class="overlay"></div>
     					</a>
@@ -385,7 +385,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/images/product-6.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0009.jpg" alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -413,7 +413,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/images/product-7.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0010.jpg" alt="Colorlib Template">
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3 text-center">
@@ -441,7 +441,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/landingpage/images/product-8.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="assets/img/imgproduk/IMG-20231126-WA0011.jpg" alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
